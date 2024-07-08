@@ -1,6 +1,5 @@
 from django.contrib.auth.models import AbstractUser
-from django.db import models
+from django.db import models  # Add this line
 
 class CustomUser(AbstractUser):
-    # Add additional fields here if needed
-    pass
+    email = models.EmailField(unique=True)
